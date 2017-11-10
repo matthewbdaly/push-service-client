@@ -17,5 +17,10 @@
             "name": "Matthew Daly",
             "email": "matthewbdaly@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Matthewbdaly\\PushService\\": "src/"
+        }
+    }
 }
