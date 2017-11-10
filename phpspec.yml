@@ -1,0 +1,4 @@
+suites:
+    test_suite:
+        namespace: Matthewbdaly\PushService
+        psr4_prefix: Matthewbdaly\PushService
