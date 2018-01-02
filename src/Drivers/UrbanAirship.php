@@ -4,9 +4,9 @@ namespace Matthewbdaly\PushService\Drivers;
 
 use Matthewbdaly\PushService\Contracts\Driver;
 
-class Pushwoosh implements Driver
+class UrbanAirship implements Driver
 {
-    protected $name = 'Pushwoosh';
+    protected $name = 'UrbanAirship';
 
     public function getDriver()
     {

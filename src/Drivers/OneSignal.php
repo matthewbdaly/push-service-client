@@ -4,9 +4,9 @@ namespace Matthewbdaly\PushService\Drivers;
 
 use Matthewbdaly\PushService\Contracts\Driver;
 
-class Pushwoosh implements Driver
+class OneSignal implements Driver
 {
-    protected $name = 'Pushwoosh';
+    protected $name = 'OneSignal';
 
     public function getDriver()
     {

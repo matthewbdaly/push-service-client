@@ -2,16 +2,16 @@
 
 namespace spec\Matthewbdaly\PushService\Drivers;
 
-use Matthewbdaly\PushService\Drivers\Pushwoosh;
+use Matthewbdaly\PushService\Drivers\OneSignal;
 use Matthewbdaly\PushService\Contracts\Driver;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class PushwooshSpec extends ObjectBehavior
+class OneSignalSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType(Pushwoosh::class);
+        $this->shouldHaveType(OneSignal::class);
     }
 
     function it_implements_interface()
@@ -21,6 +21,6 @@ class PushwooshSpec extends ObjectBehavior
 
     function it_returns_name()
     {
-        $this->getDriver()->shouldReturn('Pushwoosh');
+        $this->getDriver()->shouldReturn('OneSignal');
     }
 }
