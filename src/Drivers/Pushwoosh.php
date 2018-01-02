@@ -4,12 +4,7 @@ namespace Matthewbdaly\PushService\Drivers;
 
 use Matthewbdaly\PushService\Contracts\Driver;
 
-class Pushwoosh implements Driver
+class Pushwoosh extends Base implements Driver
 {
     protected $name = 'Pushwoosh';
-
-    public function getDriver()
-    {
-        return $this->name;
-    }
 }
