@@ -8,8 +8,18 @@ use Matthewbdaly\PushService\Drivers\UrbanAirship;
 use Matthewbdaly\PushService\Exceptions\ProviderNotSet;
 use Matthewbdaly\PushService\Exceptions\UnknownDriver;
 
+/**
+ * Class DriverFactory
+ * @package Matthewbdaly\PushService
+ */
 class DriverFactory
 {
+    /**
+     * @param array $config
+     * @return OneSignal|Pushwoosh|UrbanAirship
+     * @throws ProviderNotSet
+     * @throws UnknownDriver
+     */
     public static function resolve(array $config)
     {
         if (!isset($config['provider'])) {
