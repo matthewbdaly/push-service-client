@@ -9,6 +9,7 @@ use Matthewbdaly\PushService\Drivers\OneSignal;
 use Matthewbdaly\PushService\Drivers\Pushwoosh;
 use Matthewbdaly\PushService\Drivers\UrbanAirship;
 use Matthewbdaly\PushService\Exceptions\ProviderNotSet;
+use Matthewbdaly\PushService\Exceptions\UnknownDriver;
 
 class DriverFactorySpec extends ObjectBehavior
 {
@@ -45,5 +46,13 @@ class DriverFactorySpec extends ObjectBehavior
             'provider' => 'urbanairship',
         ];
         $this->resolve($config)->shouldReturn(UrbanAirship::class);
+    }
+
+    function it_should_throw_an_exception_if_provider_unknown()
+    {
+        $config = [
+            'provider' => 'foo',
+        ];
+        $this->shouldThrow(UnknownDriver::class)->during('resolve', [$config]);
     }
 }
