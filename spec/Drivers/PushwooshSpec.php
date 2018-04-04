@@ -23,4 +23,9 @@ class PushwooshSpec extends ObjectBehavior
     {
         $this->getDriver()->shouldReturn('Pushwoosh');
     }
+
+    public function it_returns_the_driver_endpoint()
+    {
+        $this->getEndpoint()->shouldReturn('https://cp.pushwoosh.com/json/1.3/createMessage');
+    }
 }

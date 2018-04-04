@@ -10,4 +10,9 @@ abstract class Base implements Driver
     {
         return $this->name;
     }
+
+    public function getEndpoint()
+    {
+        return $this->endpoint;
+    }
 }

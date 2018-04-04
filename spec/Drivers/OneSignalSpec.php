@@ -23,4 +23,9 @@ class OneSignalSpec extends ObjectBehavior
     {
         $this->getDriver()->shouldReturn('OneSignal');
     }
+
+    public function it_returns_the_driver_endpoint()
+    {
+        $this->getEndpoint()->shouldReturn('https://onesignal.com/api/v1/notifications');
+    }
 }

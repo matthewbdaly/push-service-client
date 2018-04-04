@@ -7,4 +7,6 @@ use Matthewbdaly\PushService\Contracts\Driver;
 class UrbanAirship extends Base implements Driver
 {
     protected $name = 'UrbanAirship';
+
+    protected $endpoint ='https://go.urbanairship.com/api/push';
 }

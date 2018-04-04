@@ -23,4 +23,9 @@ class UrbanAirshipSpec extends ObjectBehavior
     {
         $this->getDriver()->shouldReturn('UrbanAirship');
     }
+
+    public function it_returns_the_driver_endpoint()
+    {
+        $this->getEndpoint()->shouldReturn('https://go.urbanairship.com/api/push');
+    }
 }
