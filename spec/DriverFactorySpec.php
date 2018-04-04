@@ -29,7 +29,7 @@ class DriverFactorySpec extends ObjectBehavior
         $config = [
             'provider' => 'onesignal',
         ];
-        $this->resolve($config)->shouldReturn(OneSignal::class);
+        $this->resolve($config)->shouldReturnAnInstanceOf(OneSignal::class);
     }
 
     function it_should_return_pushwoosh_driver()
@@ -37,7 +37,7 @@ class DriverFactorySpec extends ObjectBehavior
         $config = [
             'provider' => 'pushwoosh',
         ];
-        $this->resolve($config)->shouldReturn(Pushwoosh::class);
+        $this->resolve($config)->shouldReturnAnInstanceOf(Pushwoosh::class);
     }
 
     function it_should_return_urbanairship_driver()
@@ -45,7 +45,7 @@ class DriverFactorySpec extends ObjectBehavior
         $config = [
             'provider' => 'urbanairship',
         ];
-        $this->resolve($config)->shouldReturn(UrbanAirship::class);
+        $this->resolve($config)->shouldReturnAnInstanceOf(UrbanAirship::class);
     }
 
     function it_should_throw_an_exception_if_provider_unknown()
